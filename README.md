@@ -1,5 +1,7 @@
 # Docker Learn
 
+- ## [The Docker Handbook](https://www.freecodecamp.org/news/the-docker-handbook/)
+
 ### 1. Ubuntu Installation
 
 - [https://docs.docker.com/engine/install/ubuntu/](https://docs.docker.com/engine/install/ubuntu/)
@@ -27,3 +29,27 @@
 - Add the `./docker-compose.yaml` contents
 
   Link: [docker-compose.yaml](docker-compose.yaml)
+
+### 4. Test docker containers
+
+```
+docker run hello-world
+```
+
+### 5. Check the docker containers
+
+```
+docker ps -a
+```
+
+### 6. Start the docker containers
+
+```
+docker-compose up -d
+```
+
+### 7. Run the docker containers using yaml
+
+```
+docker-compose -f docker-compose.yaml up
+```
