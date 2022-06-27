@@ -1,0 +1,11 @@
+.fc-fri {
+    background: indianred;
+}
+
+.fc-sat {
+    background: indianred;
+}
+
+.fc-day[data-date^="2022-03-14"] {
+    background: blue !important;
+}

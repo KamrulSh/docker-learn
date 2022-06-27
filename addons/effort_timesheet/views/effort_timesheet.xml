@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id='view_effort_timesheet_tree_11' model='ir.ui.view'>
+        <field name='name'>effort.timesheet.tree</field>
+        <field name='model'>effort.timesheet</field>
+        <field name='arch' type='xml'>
+            <tree>
+                <field name='duration'/>
+                <field name='price_unit'/>
+                <field name='price_unit2'/>
+                <field name='price_unit3'/>
+                <field name='price_unit4'/>
+                <field name='price_unit5'/>
+                <field name='my_selection'/>
+            </tree>
+        </field>
+    </record>
+
+    <record id='view_effort_timesheet_form_11' model='ir.ui.view'>
+        <field name='name'>effort.timesheet.form</field>
+        <field name='model'>effort.timesheet</field>
+        <field name='arch' type='xml'>
+            <form>
+                <sheet>
+                    <group>
+                        <field name='duration'/>
+                <field name='price_unit'/>
+                <field name='price_unit2'/>
+                <field name='price_unit3'/>
+                <field name='price_unit4'/>
+                <field name='price_unit5'/>
+                <field name='my_selection'/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id='action_effort_timesheet' model='ir.actions.act_window'>
+        <field name='name'>Effort management</field>
+        <field name='res_model'>effort.timesheet</field>
+        <field name='view_mode'>tree,form</field>
+    </record>
+
+    <menuitem
+            id='menu_effort_timesheet'
+            action='action_effort_timesheet'
+            name='Work Effort Timesheet'/>
+</odoo>
