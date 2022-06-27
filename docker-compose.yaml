@@ -33,6 +33,7 @@ services:
     # Custom modules located in the addons folder and path will have
     # to add in odoo.config
     volumes:
+      - odoo-web-data:/var/lib/odoo
       - ./config:/etc/odoo
       - ./addons:/mnt/extra-addons/custom_addons
 
@@ -60,6 +61,9 @@ services:
     ports:
       - 5000:5432
 
+    volumes:
+      - odoo-db-data:/var/lib/postgresql/data/pgdata
+
     # Database Environment Variables
     # --------
     #
@@ -73,3 +77,7 @@ services:
       - POSTGRES_PASSWORD=odoo
       - POSTGRES_USER=odoo
       - POSTGRES_DB=postgres # Leave this set to postgres
+
+volumes:
+  odoo-web-data:
+  odoo-db-data:
