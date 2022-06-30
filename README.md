@@ -109,3 +109,75 @@ docker cp {container_id}:~/myfile ~/my/file
 # Tail the process from a container
 docker logs -f {container_id}
 ```
+
+### 12. Rename docker image
+
+```
+docker image tag 3c2629942f0f kamrul/myodoo:latest
+```
+
+### 13. Stop all docker containers
+
+```
+docker stop $(docker ps -a -q)
+```
+
+### 14. Installed Docker info
+
+```
+docker system df --format 'table {{.Type}}\t{{.TotalCount}}\t{{.Size}}'
+```
+
+### 15. Save image as tar
+
+```
+docker save kamrul/myodoo:latest > odoo-image.tar
+```
+
+### 16. Load image from tar
+
+```
+docker load -i odoo-image.tar
+```
+
+### 17. Remove image
+
+```
+docker rmi kamrul/myodoo:latest
+```
+
+### 18. Inspect docker image
+
+```
+docker inspect kamrul/myodoo
+```
+
+### 19. Remove all images
+
+```
+docker rmi $(docker images -q)
+```
+
+### 20. Remove all containers
+
+```
+docker rm $(docker ps -a -q)
+```
+
+### 21. Remove all containers and images
+
+```
+docker-compose down
+```
+
+### 22. Remove all containers and images
+
+```
+docker-compose rm -f
+```
+
+### 23. Remove all containers and images
+
+```
+docker-compose down -v
+```
