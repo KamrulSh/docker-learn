@@ -6,13 +6,9 @@
         <field name='model'>effort.timesheet</field>
         <field name='arch' type='xml'>
             <tree>
-                <field name='duration'/>
-                <field name='price_unit'/>
-                <field name='price_unit2'/>
-                <field name='price_unit3'/>
-                <field name='price_unit4'/>
-                <field name='price_unit5'/>
-                <field name='my_selection'/>
+                <field name='employee_id'/>
+                <field name='salary'/>
+                <field name='provident_fund'/>
             </tree>
         </field>
     </record>
@@ -24,13 +20,9 @@
             <form>
                 <sheet>
                     <group>
-                        <field name='duration'/>
-                <field name='price_unit'/>
-                <field name='price_unit2'/>
-                <field name='price_unit3'/>
-                <field name='price_unit4'/>
-                <field name='price_unit5'/>
-                <field name='my_selection'/>
+                        <field name='employee_id'/>
+                        <field name='salary'/>
+                        <field name='provident_fund'/>
                     </group>
                 </sheet>
             </form>
@@ -43,8 +35,5 @@
         <field name='view_mode'>tree,form</field>
     </record>
 
-    <menuitem
-            id='menu_effort_timesheet'
-            action='action_effort_timesheet'
-            name='Work Effort Timesheet'/>
+    <menuitem id='menu_effort_timesheet' action='action_effort_timesheet' name='Work Effort Timesheet'/>
 </odoo>
